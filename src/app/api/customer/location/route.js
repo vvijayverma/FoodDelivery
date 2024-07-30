@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { connectionStr } from "../../../lib/db";
 import { restaurantSchema } from "../../../lib/restaurantsModel";
-import cors, { runMiddleware } from "../../../lib/cors";
+// import cors, { runMiddleware } from "../../../lib/cors";
 
 export async function GET() {
-  await runMiddleware(req, res, cors);
+  // await runMiddleware(req, res, cors);
   try {
     await mongoose.connect(connectionStr);
     let result = await restaurantSchema.find();
@@ -15,6 +15,6 @@ export async function GET() {
     result = [...new Set(result.map((item) => item))];
     return NextResponse.json({ success: true, result });
   } catch (error) {
-    res.status(500).json({ error: "Database connection error" });
+    // res.status(500).json({ error: "Database connection error" });
   }
 }

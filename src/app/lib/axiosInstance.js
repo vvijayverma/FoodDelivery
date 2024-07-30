@@ -5,7 +5,8 @@ const axiosInstance = axios.create({
 });
 
 const header={
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': 'https://food-delivery-eight-mu.vercel.app/',
     }
 
 axiosInstance.interceptors.request.use(

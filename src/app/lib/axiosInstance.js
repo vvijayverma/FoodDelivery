@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL:"http://localhost:3000/api/"
+    baseURL:"https://food-delivery-puce-ten.vercel.app/api/"
 });
 
 const header={

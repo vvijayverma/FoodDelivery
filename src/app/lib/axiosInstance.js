@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL:"https://food-delivery-puce-ten.vercel.app/api/"
+    baseURL:"https://food-delivery-puce-ten.vercel.app/"
     // https://food-delivery-puce-ten.vercel.app/api/
     // https://eazyeats-two.vercel.app/
 });

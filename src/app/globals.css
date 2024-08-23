@@ -7,3 +7,16 @@
     grid-template-columns: .4fr .6fr;
     gap: 50px;
 } */
+
+.rotate-pizza{
+    animation: pizza 10s infinite linear ;
+}
+
+@keyframes pizza {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -26,7 +26,7 @@ const Hero = () => {
             </button>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative rotate-pizza">
         <Image
           src="/pizza.png"
           alt="Pizza"

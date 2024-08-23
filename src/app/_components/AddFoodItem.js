@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import axiosInstance from "../lib/axiosInstance";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
-import { useSelector,useDispatch } from "react-redux";
 import { UpdateFoodItem } from "../features/updateSlice";
+import axiosInstance from "../lib/axiosInstance";
 
 const AddItem = ({ setAddItem }) => {
   // const router = useRouter();
@@ -90,7 +89,7 @@ const AddItem = ({ setAddItem }) => {
         <div className="m-2">
           <input
             type="text"
-            placeholder="Enter your image path"
+            placeholder="Enter live image path"
             className={`w-full rounded border px-4 py-2 ${
               errors.image ? "border-red-500" : "border-gray-300"
             }`}

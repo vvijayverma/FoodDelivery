@@ -1,9 +1,8 @@
 "use client"
-import React from "react";
-import { useForm } from "react-hook-form";
-import axiosInstance from "../lib/axiosInstance";
-import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import axiosInstance from "../lib/axiosInstance";
 
 const Login = ({setLogin,login}) => {
   const router = useRouter();

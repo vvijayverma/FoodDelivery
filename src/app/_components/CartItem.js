@@ -1,8 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import { useDispatch } from "react-redux";
-import Image from "next/image";
-import { incrementQuantity,decrementQuantity,removeItem } from "../features/cartSlice";
-import Total from './Total'
+import { decrementQuantity, incrementQuantity, removeItem } from "../features/cartSlice";
 
 const CartItem = ({
   key,

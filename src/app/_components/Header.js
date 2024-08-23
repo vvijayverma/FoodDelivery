@@ -26,9 +26,9 @@ const Header = () => {
     router.push("/restaurant");
   };
   return (
-    <div className="flex justify-between px-4 py-2 items-center bg-gray-800 shadow-md">
-      <div className="logo">
-      <Link href={`/`} className="">
+<>
+    <header className="flex justify-between items-center">
+      <Link href={`/`} className="text-primary font-bold text-2xl">
       <Image
         src={Logo}
         alt="Food Delivery"
@@ -36,36 +36,28 @@ const Header = () => {
         height={20}
         className="rounded-full"
       />
-       </Link>
-      </div>
-      <ul className="flex justify-center items-center gap-6">
-        <li className="text-xl font-bold text-white">
-          <Link href={`/`} className="">
-            Home
-          </Link>
-        </li>
+      EazyEats
+      </Link>
+      <nav className="flex gap-8 text-gray-500 font-semibold items-center">
+        <Link href={``}>Home</Link>
         {details && details.name ? (
           <>
-            {/* <li className="text-xl font-bold text-white">
-              <Link href={`/`} className="">
-                Profile
-              </Link>
-            </li> */}
-            <li className="text-xl font-bold text-white cursor-pointer">
+            <li className="cursor-pointer list-none">
               <button className="" onClick={() => Logout()}>
                 Logout
               </button>
             </li>
           </>
         ) : (
-          <li className="text-xl font-bold text-white">
+          // <li className="">
             <Link href={`/restaurant`} className="">
               Login/SignUp
             </Link>
-          </li>
+          // </li>
         )}
-      </ul>
-    </div>
+      </nav>
+    </header>
+    </>
   );
 };
 

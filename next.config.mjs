@@ -22,47 +22,9 @@ const nextConfig = {
       },
   images: {
       remotePatterns: [
-          {
-              protocol: 'https',
-              hostname: 'www.shutterstock.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'cdn.pixabay.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'static.toiimg.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'unsplash.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'images.unsplash.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'png.pngtree.com',
-              port: '',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'encrypted-tbn0.gstatic.com',
-              port: '',
-              pathname: '/**',
+        {
+            protocol: 'https',
+            hostname: '**',
           },
       ],
   },

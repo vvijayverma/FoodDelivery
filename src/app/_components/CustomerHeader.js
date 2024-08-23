@@ -29,57 +29,47 @@ const CustomerHeader = () => {
     router.push("/user-auth");
   };
   return (
-    <div className="flex justify-between px-4 py-2 items-center bg-gray-800 shadow-md">
-      <div className="logo">
-        <Link href={`/`} className="">
-          <Image
-            src={Logo}
-            alt="Food Delivery"
-            width={80}
-            height={20}
-            className="rounded-full"
-          />
-        </Link>
-      </div>
-      <ul className="flex justify-center items-center gap-6">
-        <li className="text-xl font-bold text-white">
+    <>
+      <header className="flex justify-between items-center">
+      <Link href={`/`} className="text-primary font-bold text-2xl">
+      <Image
+        src={Logo}
+        alt="Food Delivery"
+        width={80}
+        height={20}
+        className="rounded-full"
+      />
+      </Link>
+      <nav className="flex gap-8 text-gray-500 font-semibold items-center">
           <Link href={`/`} className="">
             Home
           </Link>
-        </li>
         {userData ? (
           <>
-            <li className="text-xl font-bold text-white">
               <Link href={`/order/my-order`} className="">
                 MyOrders
               </Link>
-            </li>
             <li
-              className="text-xl font-bold text-white cursor-pointer"
+              className="cursor-pointer list-none"
               onClick={() => logoutUser()}
             >
               Logout
             </li>
           </>
         ) : (
-          <li className="text-xl font-bold text-white">
             <Link href={`/user-auth`} className="">
               Login/SignUp
             </Link>
-          </li>
         )}
-        <li className="text-xl font-bold text-white">
           <Link href={`/explore/cartDetails`} className="">
             Cart ({getTotalQuantity() || 0})
           </Link>
-        </li>
-        <li className="text-xl font-bold text-white">
           <Link href={`/restaurant/dashboard`} className="">
             Add Restaurant
           </Link>
-        </li>
-      </ul>
-    </div>
+      </nav>
+    </header>
+    </>
   );
 };
 

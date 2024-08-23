@@ -52,7 +52,7 @@ const RestaurantDetail = (props) => {
           {foodDetails &&
             foodDetails?.map((item) => (
               <React.Fragment key={item._id}>
-                <CardContainer className="inter-var w-full sm:w-[19rem]">
+                <CardContainer className="inter-var w-full sm:w-[16rem]">
                   <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-[25rem] rounded-xl p-2 border flex flex-col justify-between">
                     <CardItem
                       translateZ="50"

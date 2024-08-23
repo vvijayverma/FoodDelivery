@@ -8,10 +8,14 @@
     gap: 50px;
 } */
 
-.rotate-pizza{
-    animation: pizza 10s infinite linear ;
+.rotate-pizza {
+    animation: pizza 10s infinite linear;
+    animation-play-state: running; 
 }
 
+.rotate-pizza:hover {
+    animation-play-state: paused;
+}
 @keyframes pizza {
     0%{
         transform: rotate(0deg);

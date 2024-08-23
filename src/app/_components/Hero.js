@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="grid grid-cols-2 gap-12">
+    <section className="grid grid-cols-2 gap-12 items-center">
       <div className="py-12">
         <h1 className="font-bold text-4xl">
           Every thing <br/>
@@ -26,12 +26,15 @@ const Hero = () => {
             </button>
         </div>
       </div>
-      <div className="relative rotate-pizza">
+      <div className="relative">
         <Image
           src="/pizza.png"
           alt="Pizza"
-          layout={"fill"}
-          objectFit={"contain"}
+          // layout={"fill"}
+          // objectFit={"contain"}
+          width={400}
+          height={400}
+          className="rotate-pizza"
         />
       </div>
     </section>

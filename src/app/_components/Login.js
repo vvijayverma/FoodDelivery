@@ -1,10 +1,13 @@
 "use client"
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import axiosInstance from "../lib/axiosInstance";
 
 const Login = ({setLogin,login}) => {
+  // const {order} = useParams()
+  // console.log(order,'====================');
+  
   const router = useRouter();
   const {
     register,
@@ -32,16 +35,17 @@ const Login = ({setLogin,login}) => {
     }
   };
   return (
-    <div className="flex justify-center items-center min-h-[34.9rem] bg-gradient-to-r from-red-400 to-pink-500">
-    <div className="bg-white shadow-lg rounded-lg p-8 max-w-sm w-full">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Login To Restaurant</h1>
+    <div className="flex justify-center items-center min-h-[34.9rem]">
+    <div className="bg-slate-100 shadow-slate-950 shadow-2xl rounded-lg p-8 max-w-lg w-full">
+      <h1 className="text-4xl font-bold text-gray-700 mb-6 text-center">Login To Restaurant</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="m-2">
           <input
             type="text"
             placeholder="Enter your email address"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
-              errors.email ? "border-red-500" : "border-gray-300"
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+                focus:outline-none focus:ring-2 focus:ring-red-300 ${
+                errors.email ? "border-red-300" : "border-gray-300"
             }`}
             name="email"
             {...register("email", {
@@ -60,8 +64,9 @@ const Login = ({setLogin,login}) => {
           <input
             type="password"
             placeholder="Enter your password"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
-              errors.password ? "border-red-500" : "border-gray-300"
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+                focus:outline-none focus:ring-2 focus:ring-red-300 ${
+                errors.password ? "border-red-300" : "border-gray-300"
             }`}
             name="password"
             {...register("password", {
@@ -85,11 +90,16 @@ const Login = ({setLogin,login}) => {
           </button>
         </div>
       </form>
-      <button onClick={() => setLogin(!login)} className='text-center ml-12 mt-4'>
-          {login
-            ? "Do not have account ? Sing-Up"
-            : "Already have account ? Login"}
-        </button>
+      <div className="text-center ml-12 mt-4">
+          {login ? (
+            <div className="flex justify-center items-center mr-12">
+              <p>Do not have account?&nbsp;</p>
+              <button className="text-green-400 font-bold" onClick={() => setLogin(!login)}>Sign-Up</button>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

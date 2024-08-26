@@ -36,10 +36,9 @@ const Header = () => {
         height={20}
         className="rounded-full"
       />
-      EazyEats
       </Link>
       <nav className="flex gap-8 text-gray-500 font-semibold items-center">
-        <Link href={``}>Home</Link>
+        <Link href={`/`}>Home</Link>
         {details && details.name ? (
           <>
             <li className="cursor-pointer list-none">
@@ -49,11 +48,9 @@ const Header = () => {
             </li>
           </>
         ) : (
-          // <li className="">
             <Link href={`/restaurant`} className="">
               Login/SignUp
             </Link>
-          // </li>
         )}
       </nav>
     </header>

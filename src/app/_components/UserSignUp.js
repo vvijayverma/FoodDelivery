@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { userSignUp } from "../features/authSlice";
+import Link from "next/link";
 
 const UserSignUp = ({ redirect, setLogin, login }) => {
   const router = useRouter();
@@ -35,15 +36,16 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[34.9rem] bg-gradient-to-r from-red-400 to-pink-500">
-      <div className="bg-white shadow-lg rounded-lg p-2 max-w-md w-full">
-      <h1 className="text-4xl font-bold text-gray-800 mb-2 text-center">User</h1>
+    <div className="flex justify-center items-center min-h-[34.9rem]">
+      <div className="bg-slate-50 shadow-2xl shadow-slate-950 rounded-lg p-2 max-w-md w-full">
+      <h1 className="text-4xl font-bold text-gray-600 mb-2 text-center">User Signup</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        <div className="m-2">
+        <div className="m-2"> 
           <input
             type="text"
             placeholder="Enter your email address"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2 
+              focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.email ? "border-red-500" : "border-gray-300"
               }`}
             name="email"
@@ -63,7 +65,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="password"
             placeholder="Enter your password"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.password ? "border-red-500" : "border-gray-300"
               }`}
             name="password"
@@ -83,7 +86,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="password"
             placeholder="Confirm your password"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.confirmPassword ? "border-red-500" : "border-gray-300"
               }`}
             name="confirmPassword"
@@ -102,7 +106,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="text"
             placeholder="Enter your name"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.name ? "border-red-500" : "border-gray-300"
               }`}
             name="name"
@@ -118,7 +123,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="text"
             placeholder="Enter your city"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.city ? "border-red-500" : "border-gray-300"
               }`}
             name="city"
@@ -134,7 +140,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="text"
             placeholder="Enter your full address"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.address ? "border-red-500" : "border-gray-300"
               }`}
             name="address"
@@ -150,7 +157,8 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
           <input
             type="tel"
             placeholder="Enter your contact number"
-            className={`w-full rounded border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 ${
+            className={`w-full rounded border border-gray-500 bg-gray-100 px-4 py-2
+               focus:outline-none focus:ring-2 focus:ring-red-300 ${
                 errors.contact ? "border-red-500" : "border-gray-300"
               }`}
             name="contact"
@@ -168,18 +176,21 @@ const UserSignUp = ({ redirect, setLogin, login }) => {
         </div>
         <div className="m-2 text-center">
         <button
-            className="bg-red-500 hover:bg-red-600 text-white py-2 px-10 rounded focus:outline-none focus:ring-2 focus:ring-red-400"
+            className="bg-red-500 hover:bg-red-600 text-white py-2 px-10 rounded focus:outline-none focus:ring-2 focus:ring-red-300"
             type="submit"
           >
             Sign Up
           </button>
         </div>
       </form>
-      <button onClick={() => setLogin(!login)} className="text-center ml-16 mt-4">
+      <div className="text-center ml-16 mt-4">
         {login
-          ? "Do not have account ? Sing-Up"
-          : "Already have account ? Login"}
-      </button>
+          ? ""
+          : <div className="flex justify-center items-center mr-16">
+            <p>Already have account?&nbsp;</p>
+            <button className="text-green-400 font-bold" onClick={() => setLogin(!login)}>Sign-In</button>
+            </div>}
+      </div>
       </div>
     </div>
   );

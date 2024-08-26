@@ -26,7 +26,7 @@ const Hero = () => {
             </button>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative rounded-full">
         <Image
           src="/pizza.png"
           alt="Pizza"
@@ -34,7 +34,7 @@ const Hero = () => {
           // objectFit={"contain"}
           width={400}
           height={400}
-          className="rotate-pizza"
+          className="rotate-pizza rounded-full"
         />
       </div>
     </section>

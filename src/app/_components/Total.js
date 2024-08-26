@@ -31,8 +31,8 @@ const Total = () => {
     return Math.round(num * factor) / factor;
   }
   return (
-    <div>
-      <div className="flex gap-4 text-2xl font-bold bg-white p-4 m-2 h-96 rounded">
+    <div className="shadow-2xl h-80  m-4 rounded-md">
+      <div className="flex gap-4 justify-center items-center text-2xl font-bold bg-white p-2 h-52 rounded">
         <div className="flex gap-4 flex-col">
           <span>Food Charges :</span>
           <span>Tax Amount :</span>

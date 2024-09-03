@@ -2,6 +2,7 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
     baseURL:"https://food-delivery-puce-ten.vercel.app/api/"
+    // http://localhost:3000/api/
     // https://food-delivery-puce-ten.vercel.app/api/
     // https://eazyeats-two.vercel.app/api/
 });

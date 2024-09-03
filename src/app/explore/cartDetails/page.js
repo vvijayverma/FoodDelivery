@@ -30,10 +30,8 @@ const CartDetail = () => {
               />
             </React.Fragment>
           ))}
-          {/* </div> */}
         </div>
         {cart.length > 0 ? <Total /> : null}
-        {/* </div> */}
       </div>
       {cart.length <= 0 ? (
           <div className="flex flex-col justify-center items-center">

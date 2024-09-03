@@ -13,8 +13,8 @@ import { Providers } from "./features/provider";
 const roboto = Roboto({ subsets: ["latin"],weight:['100', '300', '400', '500', '700', '900'] });
 
 export const metadata: Metadata = {
-  title: "Delivery",
-  description: "Restro Delivery",
+  title: "EazyEat",
+  description: "Food Delivery",
 };
 
 export default function RootLayout({

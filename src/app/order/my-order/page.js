@@ -26,7 +26,7 @@ const MyOrders = () => {
   return (
     <>
       <CustomerHeader />
-      <div className="min-h-screen bg-gray-100 p-6">
+      <div className="min-h-screen p-6">
         <h1 className="text-3xl font-bold mb-6 text-center">My Orders</h1>
         {myOrders && myOrders?.length <=0?
         <h2 className="text-2xl font-bold mb-6 text-center">You do not have any order</h2>

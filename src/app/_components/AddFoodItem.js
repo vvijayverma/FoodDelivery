@@ -50,17 +50,18 @@ const AddItem = ({ setAddItem }) => {
     }
   };
   return (
-    <div className="flex justify-center items-center min-h-[31.9rem] bg-gradient-to-r from-red-400 to-pink-500">
-    <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Add New Food Items</h1>
+    <div className="flex justify-center items-center min-h-[31.9rem]">
+    <div className="bg-slate-100 shadow-slate-950 shadow-2xl rounded-lg p-8 max-w-lg w-full">
+      <h1 className="text-4xl font-bold text-gray-700 mb-6 text-center">Add New Food Items</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="m-2">
           <input
             type="text"
             placeholder="Enter food name"
-            className={`w-full rounded border px-4 py-2 ${
-              errors.name ? "border-red-500" : "border-gray-300"
-            }`}
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+              focus:outline-none focus:ring-2 focus:ring-red-300 ${
+              errors.name ? "border-red-300" : "border-gray-300"
+          }`}
             name="name"
             {...register("name", {
               required: "food name is required",
@@ -74,9 +75,10 @@ const AddItem = ({ setAddItem }) => {
           <input
             type="text"
             placeholder="Enter your price"
-            className={`w-full rounded border px-4 py-2 ${
-              errors.price ? "border-red-500" : "border-gray-300"
-            }`}
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+              focus:outline-none focus:ring-2 focus:ring-red-300 ${
+              errors.price ? "border-red-300" : "border-gray-300"
+          }`}
             name="price"
             {...register("price", {
               required: "price is required",
@@ -90,9 +92,10 @@ const AddItem = ({ setAddItem }) => {
           <input
             type="text"
             placeholder="Enter live image path"
-            className={`w-full rounded border px-4 py-2 ${
-              errors.image ? "border-red-500" : "border-gray-300"
-            }`}
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+              focus:outline-none focus:ring-2 focus:ring-red-300 ${
+              errors.image ? "border-red-300" : "border-gray-300"
+          }`}
             name="image"
             {...register("image", {
               required: "image path is required",
@@ -106,9 +109,10 @@ const AddItem = ({ setAddItem }) => {
           <input
             type="text"
             placeholder="Enter your full description"
-            className={`w-full rounded border px-4 py-2 ${
-              errors.description ? "border-red-500" : "border-gray-300"
-            }`}
+            className={`w-full rounded border bg-gray-100 border-gray-500 px-4 py-2 
+              focus:outline-none focus:ring-2 focus:ring-red-300 ${
+              errors.description ? "border-red-300" : "border-gray-300"
+          }`}
             name="description"
             {...register("description", {
               required: "description is required",

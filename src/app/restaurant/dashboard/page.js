@@ -11,7 +11,7 @@ const Dashboard = () => {
     <>
     <Header/>
     <div className=''>
-      <div className='bg-gradient-to-r from-red-400 to-pink-500'>
+      <div className=''>
       <button onClick={()=>setAddItem(true)} className={`px-4 py-2 bg-gray-500 mt-2 mx-2 rounded text-white font-bold ${addItem ? "bg-lime-400" : "bg-gray-500"}`}>Add Item</button>
       <button onClick={()=>setAddItem(false)} className={`px-4 py-2 bg-gray-500 mt-2 mx-2 rounded text-white font-bold ${addItem ? "bg-gray-500" : "bg-lime-400"}`}>Dashboard</button>
       </div>

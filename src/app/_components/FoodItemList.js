@@ -41,25 +41,12 @@ const FoodItemList = ({ setAddItem }) => {
   return (
     <div>
       <h2 className="text-3xl font-bold text-center">Added Food Items</h2>
-      <div className="bg-gray-100 grid sm:grid-cols-1 md:grid-cols-4 mx-4 my-12">
+      <div className="grid sm:grid-cols-1 md:grid-cols-4 mx-4 my-12">
         {foodItems &&
           foodItems?.map((item) => (
             <React.Fragment key={item._id}>
-              <CardContainer className="inter-var w-full sm:w-[19rem]">
-                <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-[25rem] rounded-xl p-2 border flex flex-col justify-between">
-                  <CardItem
-                    translateZ="50"
-                    className="text-xl font-bold dark:text-white"
-                  >
-                    Delicious {item.name}
-                  </CardItem>
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                  >
-                    {item.description}
-                  </CardItem>
+              <CardContainer className="w-full sm:w-[19rem]">
+                <CardBody className="bg-gray-50 relative w-full h-[20rem] shadow-2xl rounded-lg border flex flex-col justify-center items-center">
                   <CardItem
                     translateZ="100"
                     style={{
@@ -70,20 +57,40 @@ const FoodItemList = ({ setAddItem }) => {
                   >
                     <Image
                       src={item.image}
-                      className="object-cover rounded-xl group-hover:shadow-xl"
+                      className="object-cover rounded-xl group-hover:shadow-xl pb-2"
                       layout="fill"
+                      // objectFit="cover"
                       alt="thumbnail"
                     />
                   </CardItem>
-                  <div className="flex justify-between gap-2 font-bold text-3xl mt-2">
-                    <TbEdit
-                      className="cursor-pointer bg-blue-500 p-1 rounded"
-                      onClick={() => UpdateFood(item)}
-                    />
-                    <MdDelete
-                      className="cursor-pointer bg-red-500 p-1 rounded"
-                      onClick={() => DeleteItem(item._id)}
-                    />
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold dark:text-white"
+                  >
+                    Delicious {item.name}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-500 text-sm max-w-sm mt-1 dark:text-neutral-300"
+                  >
+                    {item.description}
+                  </CardItem>
+                  <div className="flex justify-between gap-24 font-bold mt-1">
+                    <button className="flex gap-1 justify-center items-center bg-blue-300 rounded-lg px-2">
+                      <TbEdit
+                        className="cursor-pointer rounded"
+                        onClick={() => UpdateFood(item)}
+                      />
+                      Edit
+                    </button>
+                    <button className="flex gap-1 justify-center items-center bg-red-500 rounded-lg px-2 py-1">
+                      <MdDelete
+                        className="cursor-pointer bg-red-500 rounded"
+                        onClick={() => DeleteItem(item._id)}
+                      />
+                      Delete
+                    </button>
                   </div>
                 </CardBody>
               </CardContainer>

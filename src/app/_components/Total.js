@@ -1,7 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
 const Total = () => {
   const router = useRouter();
@@ -32,7 +30,7 @@ const Total = () => {
   }
   return (
     <div className="shadow-2xl h-80  m-4 rounded-md">
-      <div className="flex gap-4 justify-center items-center text-2xl font-bold bg-white p-2 h-52 rounded">
+      <div className="flex gap-20 justify-center items-center font-bold bg-white h-52 rounded">
         <div className="flex gap-4 flex-col">
           <span>Food Charges :</span>
           <span>Tax Amount :</span>
@@ -49,7 +47,7 @@ const Total = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button onClick={()=>OrderNow()} className="text-2xl font-bold bg-green-500 px-28 py-4 rounded">
+        <button onClick={()=>OrderNow()} className="font-bold bg-green-500 px-24 py-4 rounded">
           Order Now
         </button>
       </div>

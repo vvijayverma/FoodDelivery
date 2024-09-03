@@ -23,7 +23,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-4  lg:grid-cols-4 pt-32",
+        "grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 pt-32",
         className
       )}
     >
@@ -54,7 +54,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.name}</CardTitle>
-            <CardDescription>{item.contact}</CardDescription>
+            <CardDescription className="">{item.contact}</CardDescription>
             <CardDescription>{item.address}</CardDescription>
             <CardDescription>{item.email}</CardDescription>
             <CardDescription>{item.city}</CardDescription>
@@ -75,7 +75,7 @@ export const Card = ({
   return (
     <div
     className={cn(
-      "rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-300 hover:bg-white shadow-2xl dark:bg-gray-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-200 relative z-20 flex justify-center items-center",
+      "rounded-2xl h-full w-full overflow-hidden bg-gray-300 hover:bg-white shadow-2xl dark:bg-gray-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-200 relative z-20 flex justify-center items-center",
       className
     )}
   >
